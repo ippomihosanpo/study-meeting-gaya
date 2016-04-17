@@ -89,7 +89,7 @@ $(document).ready ->
 	maxHeight = $('#reactions').height()
 	maxWidth = $('#reactions').width()
 	# MilkCocoaからリアクションを取得、画面に表示する
-	dsReaction.stream().size(2000).next (err, datas) ->
+	dsReaction.stream().size(100).next (err, datas) ->
 		datas.forEach (data) ->
 			if date == data.value.date
 				showReaction(data.value.type, data.value.x, data.value.y)
