@@ -1,0 +1,168 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+}
+#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #def0f3;
+	#container {
+		background-color: #fff;
+		position: relative;
+		border: 1px solid #e7e7e7;
+		width: calc(90% - 30px);
+		height: 100%;
+		box-sizing: border-box;
+		margin: 0 auto;
+		padding: 10px 0;
+		text-align: center;
+		color: #555;
+		#title {
+			height: 70px;
+			box-sizing: border-box;
+			p {
+				font-size: 70%;
+				color: #999;
+			}
+		}
+		#reactions {
+			position: relative;
+			width: 100%;
+			height: calc(100% - 70px - 340px);
+			padding: 10px;
+			box-sizing: border-box;
+			.reaction{
+				position: absolute;
+				display: block;
+				font-size: 90%;
+				font-weight: bold;
+				color: #fff;
+				border-radius: 20px;
+				border: 1px solid #fff;
+				padding: 10px;
+				animation: fadeIn 0.5s ease 0s 1 normal;
+				-webkit-animation: fadeIn 0.5s ease 0s 1 normal;
+				&.oyo {
+					background-color: #ffce5c;
+				}
+				&.miho {
+					background-color: #fa8c8c;
+				}
+				&.nobi {
+					background-color: #f5935a;
+				}
+				&.kou {
+					background-color: #72a4b5;
+				}
+			}
+		}
+		#buttons {
+			width: 100%;
+			height: 340px;
+			box-sizing: border-box;
+			padding: 10px 5px;
+			position: absolute;
+			bottom: 0;
+			.button {
+				display: inline-block;
+				position: relative;
+				font-size: 100%;
+				width: 150px;
+				height: 150px;
+				background-size: 150px;
+				border-radius: 10%;
+				box-shadow:3px 3px #c9c9c9;
+				margin: 5px;
+				&.oyo {
+					background-color: #ffce5c;
+				}
+				&.miho {
+					background-color: #fa8c8c;
+				}
+				&.nobi {
+					background-color: #f5935a;
+				}
+				&.kou {
+					background-color: #72a4b5;
+				}
+				&.active {
+					color: #fff;
+					font-weight: bold;
+					&.oyo {
+						background-image: url('/images/oyo.jpg');
+					}
+					&.miho {
+						background-image: url('/images/miho.jpg');
+					}
+					&.nobi {
+						background-image: url('/images/nobi.jpg');
+					}
+					&.kou {
+						background-image: url('/images/kou.jpg');
+					}
+				}
+
+				.btntext{
+					text-align: center;
+					padding-top: 67px;
+				}
+			}
+		}
+		#results {
+			width: 90%;
+			box-sizing: border-box;
+			border: 1px solid #e7e7e7;
+			border-radius: 8px;
+			padding: 30px 10px;
+			margin: 20px auto 0 auto;
+			.result {
+				position: relative;
+				width: 0px;
+				max-width: 100%;
+				height: 50px;
+				box-sizing: border-box;
+				border-radius: 8px;
+				margin-bottom: 10px;
+				text-align: left;
+				font-size: 80%;
+				padding: 16px 0 0 5px;
+				animation: fadeIn 0.5s ease 0s 1 normal;
+				-webkit-animation: fadeIn 0.5s ease 0s 1 normal;
+				&.oyo {
+					background-color: #ffce5c;
+				}
+				&.miho {
+					background-color: #fa8c8c;
+				}
+				&.nobi {
+					background-color: #f5935a;
+				}
+				&.kou {
+					background-color: #72a4b5;
+				}
+				span {
+					display: block;
+					position: absolute;
+					left: calc(100% + 10px);
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
