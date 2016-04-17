@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
 	def index
+		@date = Time.now.strftime('%Y%m%d')
 	end
 	def result
 		@date = params[:date] || Time.now.strftime('%Y%m%d')

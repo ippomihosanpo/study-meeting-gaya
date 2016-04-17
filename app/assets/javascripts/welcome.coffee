@@ -81,7 +81,7 @@ getResults = (date) ->
 	return dfd.promise()
 
 $(document).ready ->
-	date = $("#results").attr("data-date")
+	date = $("#container").attr("data-date")
 	maxHeight = $('#reactions').height()
 	maxWidth = $('#reactions').width()
 	# MilkCocoaからリアクションを取得、画面に表示する
