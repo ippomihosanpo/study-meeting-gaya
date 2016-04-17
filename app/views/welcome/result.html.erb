@@ -3,7 +3,7 @@
 		<div id="title">
 			<h1><%=@date_format%>のおひぃ度</h1>
 		</div>
-		<div id="results">
+		<div id="results" data-date="<%= @date %>">
 			<div class="result nobi"><span>おひぃ↓</span></div>
 			<div class="result kou"><span>ほぉんとに！？</span></div>
 			<div class="result oyo"><span>なるほど！</span></div>
@@ -11,8 +11,3 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	$(function(){
-		showResult(<%= @date %>);
-	});
-</script>

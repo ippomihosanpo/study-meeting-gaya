@@ -26,8 +26,11 @@ body {
 		text-align: center;
 		color: #555;
 		#title {
-			height: 70px;
+			height: 50px;
 			box-sizing: border-box;
+			h1 {
+				font-size: 1.5em;
+			}
 			p {
 				font-size: 70%;
 				color: #999;
@@ -36,7 +39,7 @@ body {
 		#reactions {
 			position: relative;
 			width: 100%;
-			height: calc(100% - 70px - 250px);
+			height: calc(100% - 50px - 250px);
 			padding: 10px;
 			box-sizing: border-box;
 			.reaction{

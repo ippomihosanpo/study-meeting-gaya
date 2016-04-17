@@ -1,8 +1,7 @@
 milkcocoa = new MilkCocoa('hotin42a88s.mlkcca.com')
 dsReaction = milkcocoa.dataStore("reaction")
 dsCount = milkcocoa.dataStore("reaction_cout")
-today = new Date()
-date = today.getFullYear() + ( "0"+( today.getMonth()+1 ) ).slice(-2) + ( "0"+today.getDate() ).slice(-2)
+date = null
 
 maxHeight = 0
 maxWidth = 0
@@ -23,12 +22,8 @@ totalCount = 0
 
 # リアクションを表示する位置をランダムで取得
 getRandomPos = (type, limit) ->
-	pos = (Math.floor((Math.random() * (limit+1) / limit) * 100))
-	max = if type == 'x' then 63 else 90
-	if pos >= max
-		return max
-	else
-		return pos
+	max = if type == 'x' then limit - 92 else limit - 10
+	return (Math.floor((Math.random() * (max+1) / limit) * 100))
 
 # リアクション情報をMilkCocoaに送信する
 sendReaction = (type, x, y) ->
@@ -86,6 +81,7 @@ getResults = (date) ->
 	return dfd.promise()
 
 $(document).ready ->
+	date = $("#results").attr("data-date")
 	maxHeight = $('#reactions').height()
 	maxWidth = $('#reactions').width()
 	# MilkCocoaからリアクションを取得、画面に表示する
@@ -95,6 +91,8 @@ $(document).ready ->
 				showReaction(data.value.type, data.value.x, data.value.y)
 			return
 		return
+	showResult(date)
+
 	# 他の人がリアクションしたかを監視
 	dsReaction.on 'push', (data) ->
 		showReaction(data.value.type, data.value.x, data.value.y)
