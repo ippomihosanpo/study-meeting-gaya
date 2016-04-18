@@ -1,6 +1,15 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$brown:#9b7656;
+$green:#9dcd82;
+// $yellow:#fff471;
+$yellow:#fde375;
+$orange:#f2997a;
+$pink:#efa2b5;
+$mint:#d8e9be;
+$bg-color:#fffef0;
+
 html {
 	height: 100%;
 }
@@ -13,7 +22,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #def0f3;
+	background-color: $bg-color;
 	#container {
 		background-color: #fff;
 		position: relative;
@@ -26,10 +35,10 @@ body {
 		text-align: center;
 		color: #555;
 		#title {
-			height: 50px;
+			height: 70px;
 			box-sizing: border-box;
-			h1 {
-				font-size: 1.5em;
+			img {
+				height: 50px;
 			}
 			p {
 				font-size: 70%;
@@ -39,7 +48,7 @@ body {
 		#reactions {
 			position: relative;
 			width: 100%;
-			height: calc(100% - 50px - 250px);
+			height: calc(100% - 70px - 180px);
 			padding: 10px;
 			box-sizing: border-box;
 			.reaction{
@@ -54,48 +63,62 @@ body {
 				animation: fadeIn 0.5s ease 0s 1 normal;
 				-webkit-animation: fadeIn 0.5s ease 0s 1 normal;
 				&.oyo {
-					background-color: #ffce5c;
+					background-color: $yellow;
 				}
 				&.miho {
-					background-color: #fa8c8c;
+					background-color: $pink;
 				}
-				&.nobi {
-					background-color: #f5935a;
+				&.nobi1 {
+					background-color: $brown;
+				}
+				&.nobi2 {
+					background-color: $green;
 				}
 				&.kou {
-					background-color: #72a4b5;
+					background-color: $orange;
+				}
+				&.ono {
+					background-color: $mint;
 				}
 			}
 		}
 		#buttons {
 			width: 100%;
-			height: 250px;
+			height: 180px;
 			box-sizing: border-box;
-			padding: 10px 5px;
+			padding: 10px 0;
 			position: absolute;
 			bottom: 0;
 			.button {
 				cursor: pointer;
 				display: inline-block;
 				position: relative;
-				font-size: 80%;
-				width: 100px;
-				height: 100px;
-				background-size: 100px;
+				font-size: 60%;
+				font-weight: bold;
+				color: #fff;
+				width: 70px;
+				height: 70px;
+				background-size: 70px;
 				border-radius: 10%;
 				box-shadow:3px 3px #c9c9c9;
 				margin: 5px;
 				&.oyo {
-					background-color: #ffce5c;
+					background-color: $yellow;
 				}
 				&.miho {
-					background-color: #fa8c8c;
+					background-color: $pink;
 				}
-				&.nobi {
-					background-color: #f5935a;
+				&.nobi1 {
+					background-color: $brown;
+				}
+				&.nobi2 {
+					background-color: $green;
 				}
 				&.kou {
-					background-color: #72a4b5;
+					background-color: $orange;
+				}
+				&.ono {
+					background-color: $mint;
 				}
 				&.active {
 					color: #fff;
@@ -106,10 +129,16 @@ body {
 					&.miho {
 						background-image: url('https://s3.amazonaws.com/kyoton-mlkcca/study-meeting-gaya/images/miho.jpg');
 					}
-					&.nobi {
+					&.nobi1 {
+						background-image: url('https://s3.amazonaws.com/kyoton-mlkcca/study-meeting-gaya/images/nobi.jpg');
+					}
+					&.nobi2 {
 						background-image: url('https://s3.amazonaws.com/kyoton-mlkcca/study-meeting-gaya/images/nobi.jpg');
 					}
 					&.kou {
+						background-image: url('https://s3.amazonaws.com/kyoton-mlkcca/study-meeting-gaya/images/kou.jpg');
+					}
+					&.ono {
 						background-image: url('https://s3.amazonaws.com/kyoton-mlkcca/study-meeting-gaya/images/kou.jpg');
 					}
 				}
@@ -141,16 +170,22 @@ body {
 				animation: fadeIn 0.5s ease 0s 1 normal;
 				-webkit-animation: fadeIn 0.5s ease 0s 1 normal;
 				&.oyo {
-					background-color: #ffce5c;
+					background-color: $yellow;
 				}
 				&.miho {
-					background-color: #fa8c8c;
+					background-color: $pink;
 				}
-				&.nobi {
-					background-color: #f5935a;
+				&.nobi1 {
+					background-color: $brown;
+				}
+				&.nobi2 {
+					background-color: $green;
 				}
 				&.kou {
-					background-color: #72a4b5;
+					background-color: $orange;
+				}
+				&.ono {
+					background-color: $mint;
 				}
 				span {
 					display: block;

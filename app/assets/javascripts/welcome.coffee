@@ -6,18 +6,22 @@ date = null
 maxHeight = 0
 maxWidth = 0
 reactions = {
-	nobi:'おひぃ↓',
+	nobi1:'おひぃ↓',
+	nobi2:'おひぃ↑',
 	oyo:'なるほど！',
 	kou:'ほぉんとに！？',
-	miho:'へぇー'
+	miho:'ふんふん',
+	ono:'おのうえ！'
 }
 results = {
-	nobi:0,
+	nobi1:0,
+	nobi2:0,
 	oyo:0,
 	kou:0,
-	miho:0
+	miho:0,
+	ono:0
 }
-resultSize = 4
+resultSize = 6
 totalCount = 0
 
 # リアクションを表示する位置をランダムで取得
@@ -85,7 +89,7 @@ $(document).ready ->
 	maxHeight = $('#reactions').height()
 	maxWidth = $('#reactions').width()
 	# MilkCocoaからリアクションを取得、画面に表示する
-	dsReaction.stream().size(100).next (err, datas) ->
+	dsReaction.stream().size(500).next (err, datas) ->
 		datas.forEach (data) ->
 			if date == data.value.date
 				showReaction(data.value.type, data.value.x, data.value.y)
