@@ -8,10 +8,10 @@ maxWidth = 0
 reactions = {
 	nobi1:'おひぃ↓',
 	nobi2:'おひぃ↑',
-	oyo:'なるほど！',
+	oyo:'きになるー',
 	kou:'ほぉんとに！？',
 	miho:'ふんふん',
-	ono:'おのうえ！'
+	ono:'なんでやねん'
 }
 results = {
 	nobi1:0,
