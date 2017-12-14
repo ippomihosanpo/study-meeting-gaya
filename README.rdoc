@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2016/4/19 [登壇者女子限定 Milkcocoa Girls ! Milkcocoa Meetup vol10](https://mlkcca.connpass.com/event/29628/)のプレゼンにて作ったでもアプリです。
 
-Things you may want to cover:
+* プレゼン資料
+[Milkcocoaでおひぃボタンつくったよ](https://www.slideshare.net/ssuser0c0177/milkcocoa-61171395)
 
-* Ruby version
+* デモアプリ
+(https://study-meeting-gaya.herokuapp.com)[https://study-meeting-gaya.herokuapp.com]
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
