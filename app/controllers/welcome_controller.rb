@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-	http_basic_authenticate_with name: "meuron", password: "dev"
 	def index
 		@date = Time.now.strftime('%Y%m%d')
 	end
